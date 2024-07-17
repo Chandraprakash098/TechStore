@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Layout from "./../../components/Layout/Layout";
 import axios from "axios";
-import {useNavigate} from 'react-router-dom'
-import '../../styles/AuthStyle.css'
+import { useNavigate } from "react-router-dom";
+import "../../styles/AuthStyle.css";
 import { toast } from "react-toastify";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -13,20 +15,26 @@ const Signup = () => {
   const [address, setAddress] = useState("");
   const [secretQuestion, setSecretQuestion] = useState("");
   const [secretAnswer, setSecretAnswer] = useState("");
-  const navigate=useNavigate()
+  const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(
-        `/api/v1/auth/register`,
-        { name, email, password, mobile, address, secretQuestion, secretAnswer }
-      );
+      const res = await axios.post(`/api/v1/auth/register`, {
+        name,
+        email,
+        password,
+        mobile,
+        address,
+        secretQuestion,
+        secretAnswer,
+      });
       if (res.data.success) {
         toast.success(res.data.message);
         setTimeout(() => {
           navigate("/login");
-        }, 5000); 
+        }, 5000);
       } else {
         toast.error(res.data.message);
       }
@@ -67,15 +75,22 @@ const Signup = () => {
           </div>
           <div className="form-group">
             <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              id="password"
-              className="form-control"
-              placeholder="Enter your password"
-              required
-            />
+            <div className="password-input-container">
+              <input
+                type={showPassword ? "text" : "password"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                id="password"
+                className="form-control"
+                placeholder="Enter your password"
+                required
+              />
+              <FontAwesomeIcon
+                icon={showPassword ? faEyeSlash : faEye}
+                className="password-toggle-icon"
+                onClick={() => setShowPassword(!showPassword)}
+              />
+            </div>
           </div>
           <div className="form-group">
             <label htmlFor="mobile">Mobile Number</label>

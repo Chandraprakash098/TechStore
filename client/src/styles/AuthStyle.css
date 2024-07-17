@@ -31,6 +31,8 @@
 .signup-form .form-control {
     width: 100%;
     padding: 10px;
+    padding-right: 40px;
+    /* Add extra padding to the right for the icon */
     font-size: 1rem;
     border: 1px solid #ced4da;
     border-radius: 5px;
@@ -77,6 +79,18 @@
     background-color: #0056b3;
 }
 
+.password-input-container {
+    position: relative;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
 @media (max-width: 600px) {
     .signup-container {
         width: 90%;
@@ -90,6 +104,8 @@
 
     .signup-form .form-control {
         padding: 8px;
+        padding-right: 30px;
+        /* Adjust padding for smaller screens */
         font-size: 0.9rem;
     }
 
@@ -127,6 +143,7 @@
 .form-control {
     margin-bottom: 25px;
     background-color: azure;
+    position: relative;
 }
 
 .form-control label {
@@ -137,10 +154,18 @@
 
 .form-control input {
     width: 100%;
-    padding: 10px;
+    padding: 10px 35px 10px 10px;
+    /* Add right padding for the icon */
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+.password-input-container .password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 
 button {
@@ -177,6 +202,7 @@ button:hover {
 .forgot-password-link:hover {
     background-color: green;
 }
+
 @media (max-width: 600px) {
     .login-form {
         padding: 20px;
@@ -190,7 +216,6 @@ button:hover {
         margin-bottom: 20px;
     }
 }
-
 /* Reset Password */
 
 

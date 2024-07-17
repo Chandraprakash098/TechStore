@@ -117,7 +117,7 @@ const HomePage = () => {
     <Layout title={"Home Page"}>
       <div className="homepage-container">
         <div className="products-section">
-          <h1 className="head" style={{color:"black"}}>TECH  -  PRODUCTS</h1>
+          <h1 className="head" >TECH  -  PRODUCTS</h1>
           <div className="products-grid">
             {products.map((p) => (
               <div className="product-card" key={p._id}>
