@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .baskervville-sc-regular {
+  font-family: "Baskervville SC", serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+.navbar {
+  font-family: "Baskervville SC", serif;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px red;
+  background-color: #ffcc00;
+  padding: 10px 20px;
+}
+.navbar.navbar-expand-lg {
+  background-color: gray !important;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: black;
+  letter-spacing: 2px;
+}
+
+.nav-items-spacing .nav-item {
+  margin-right: 10px;
+  /* Adjust the value to your preference */
+}
+
+.navbar-brand:hover {
+  color: #0056b3;
+}
+.shopping-icon{
+  color: black;
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.nav-item .nav-link {
+  color: #333;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-item .nav-link:hover {
+  color:orange;
+}
+
+.active {
+  background-color: aquamarine;
+  color: #fff;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    font-size: 16px;
+    /* Adjusted font size for smaller screens */
+    padding: 5px 10px;
+    /* Reduced padding for smaller screens */
+  }
+
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .nav-item .nav-link {
+    padding: 8px 10px;
+    /* Adjusted padding for smaller screens */
+    text-align: center;
+    /* Center text for better readability */
+  }
+
+
+
+}
+
+/* Page not Found CSS */
+.page-not-found-container {
+  text-align: center;
+  padding: 50px;
+  background-color: #333;
+  text-align: center;
+}
+
+.page-not-found-container h1 {
+  font-size: 80px;
+  margin: 0;
+  color: #ff6347;
+  /* Tomato color for the error code */
+}
+
+.page-not-found-container h2 {
+  font-size: 40px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.page-not-found-container p {
+  font-size: 20px;
+  margin: 20px 0;
+  color: red;
+  
+}
+
+.home-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.home-link:hover {
+  background-color: #0056b3;
+}
+
+/* Contact page Css */
+.contact-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 1.5rem;
+  background-color: aquamarine;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.contact-title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #343a40;
+}
+
+.contact-description {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-item h2 {
+  font-size: 1.25rem;
+  color: #007bff;
+  margin-bottom: 0.3rem;
+}
+
+.contact-item p,
+.contact-item a {
+  font-size: 1rem;
+  color: #343a40;
+  margin: 0;
+}
+
+.contact-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 0.3rem;
+}
+
+
+/* About Page CSS */
+
+.about-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background-color: aquamarine;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.about-title {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  color: #343a40;
+}
+
+.about-text {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: gray;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .about-container {
+    padding: 1rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+}
+
+/* Privacy Policy Page */
+
+.policy-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  background-color:aquamarine;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.policy-title {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  color: gray;
+  text-align: center;
+}
+
+.policy-text {
+  font-size: 1.2rem;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+.policy-text h2{
+  text-align: center;
+}
+
+.policy-text p {
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 600px) {
+  .policy-container {
+    padding: 1rem;
+  }
+
+  .policy-title {
+    font-size: 2rem;
+  }
+
+  .policy-text {
+    font-size: 1rem;
+  }
+}
+
+
