@@ -24,7 +24,7 @@ const UpdateProduct = () => {
   const getSingleProduct = async () => {
     try {
       const { data } = await axios.get(
-        `${process.env.REACT_APP_API}/api/v1/product/get-product/${params.slug}`
+        `/api/v1/product/get-product/${params.slug}`
       );
       setName(data.products.name);
       setId(data.products._id);
@@ -46,7 +46,7 @@ const UpdateProduct = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        `${process.env.REACT_APP_API}/api/v1/category/get-category`
+        `/api/v1/category/get-category`
       );
       if (data?.success) {
         setCategories(data?.category);
@@ -73,7 +73,7 @@ const UpdateProduct = () => {
       photo && productData.append("photo", photo);
       productData.append("category", category);
       const { data } = axios.put(
-        `${process.env.REACT_APP_API}/api/v1/product/update-product/${id}`,
+        `/api/v1/product/update-product/${id}`,
         productData
       );
       if (data?.success) {
@@ -95,7 +95,7 @@ const UpdateProduct = () => {
       if (!answer) return;
       console.log("Deleting product with ID:", id);
       const { data } = await axios.delete(
-        `${process.env.REACT_APP_API}/api/v1/product/delete-product/${id}`
+        `/api/v1/product/delete-product/${id}`
       );
       toast.success("Product DEleted Succfully");
       navigate("/dashboard/admin/products");
@@ -115,7 +115,7 @@ const UpdateProduct = () => {
             <h1>Update Product</h1>
             <div className="m-1 w-75">
               <Select
-                bordered={false}
+                variant={false}
                 placeholder="Select a category"
                 size="large"
                 showSearch
@@ -203,7 +203,7 @@ const UpdateProduct = () => {
               </div>
               <div className="mb-3">
                 <Select
-                  bordered={false}
+                  variant={false}
                   placeholder="Select Shipping "
                   size="large"
                   showSearch
