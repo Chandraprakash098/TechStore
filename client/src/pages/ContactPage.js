@@ -14,23 +14,23 @@ const ContactPage = () => {
           <div className="contact-item">
             <FaPhone className="contact-icon" />
             <h2>Phone</h2>
-            <p>+123 456 7890</p>
+            <p>6204421804</p>
           </div>
           <div className="contact-item">
             <FaEnvelope className="contact-icon" />
             <h2>Email</h2>
-            <p>contact@mobtechmarketplace.com</p>
+            <p>chandraprakash96386@gmail.com</p>
           </div>
           <div className="contact-item">
             <FaLinkedin className="contact-icon" />
             <h2>LinkedIn</h2>
             <p>
               <a
-                href="https://www.linkedin.com/company/mobtechmarketplace"
+                href="https://www.linkedin.com/in/chandra-prakash-062541248"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                linkedin.com/company/mobtechmarketplace
+                linkedin.com
               </a>
             </p>
           </div>
@@ -39,11 +39,11 @@ const ContactPage = () => {
             <h2>Instagram</h2>
             <p>
               <a
-                href="https://www.instagram.com/mobtechmarketplace"
+                href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @mobtechmarketplace
+                Instagram
               </a>
             </p>
           </div>
